@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <style>
+        button {
+            width: 80px;
+        }
+        hr {
+            border-style: dotted;
+            border-color: #182e52;
+        }
+    </style>
+    <script>
+        $(function () {
+            $('#add').click(function() {
+                num1 = $('#num1').val()
+                num2 = $('#num2').val()
+                num11 = parseInt(num1)
+                num22 = parseInt(num2)
+                $('#result').html(num11 + num22)
+            })
+            $('#sub').click(function() {
+                num1 = $('#num1').val()
+                num2 = $('#num2').val()
+                num11 = parseInt(num1)
+                num22 = parseInt(num2)
+                $('#result').html(num11 - num22)
+            })
+            $('#mul').click(function() {
+                num1 = $('#num1').val()
+                num2 = $('#num2').val()
+                num11 = parseInt(num1)
+                num22 = parseInt(num2)
+                $('#result').html(num11 * num22)
+            })
+            $('#div').click(function() {
+                num1 = $('#num1').val()
+                num2 = $('#num2').val()
+                num11 = parseInt(num1)
+                num22 = parseInt(num2)
+                $('#result').html(num11 / num22)
+            })
+            $('#reset').click(function() {
+                $('#result').html('')
+            })
+        })
+    </script>
+</head>
+<body align="center" bgcolor="#d5e1f5">
+    <h1 align="center" style="color: blue;">계산</h1>
+    <hr>
+    첫 번째 수: <input type="text" id="num1"> <br>
+    두 번째 수: <input type="text" id="num2"> <br>
+    <button id="add">더하기</button>
+    <button id="sub">빼기</button>
+    <button id="mul">곱하기</button>
+    <button id="div">나누기</button>
+    <button id="reset">초기화</button>
+    <br> <br>
+    결과: <div id="result"></div>
+</body>
+</html>

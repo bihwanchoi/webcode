@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홈페이지</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <style>
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        a:hover {
+            color: red;
+        }
+        hr {
+            border-style: dotted;
+            border-color: #182e52;
+        }
+        button {
+            height: 50px;
+            width: 120px;
+            font-size: 15px;
+        }
+        li {
+            color: black;
+            font-size: 30px;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        $(function () {
+            $('#b1').click(function() {
+                changec = confirm('글자를 추가하겠습니까?')
+                if (changec == true) {
+                    $(function () {
+                        word = prompt('추가할 글자를 입력')
+                        $('#result').html(word)
+                    })
+                }
+            })
+        })
+        $(function () {
+            $('#b3').click(function() {
+                deletew = confirm('정말 글자를 지우겠습니까?')
+                if (deletew == true) {
+                    $('#result').html('')
+                }
+            })
+        })
+    </script>
+</head>
+<body bgcolor="#d5e1f5">
+    <h1 align="center" style="color: blue;">홈페이지</h1>
+    <button id="b2" style="background: royalblue;"><a href="page09.html" style="color: seashell;">로그인</a></button> <br> <br>
+    <hr>
+    <ul>
+        <li><a href="page05.html">취미</a></li>
+        <li><a href="page06.html">시간표</a></li>
+        <li><a href="page07.html">유튜브</a></li>
+        <li><a href="page08.html">지도</a></li>
+        <li><a href="page10.html">계산</a></li>
+    </ul>
+    <hr>
+    <button id="b1" style="background: royalblue; color: seashell;">글자 입력하기</button>
+    <button id="b3" style="background: royalblue; color: seashell;">글자 지우기</button>
+    <div id="result"></div>
+</body>
+</html>
